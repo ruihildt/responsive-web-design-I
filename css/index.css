@@ -168,6 +168,14 @@ body {
     margin: 0 auto;
 }
 
+@media(max-width:800px) {
+
+}
+
+@media(max-width:500px) {
+
+}
+
 a {
     text-decoration: none;
     color: grey;
@@ -206,6 +214,7 @@ a.cta-box {
 
 
 /*Nav*/
+
 header {
     position: sticky;
     top: 0;
@@ -229,6 +238,26 @@ header img {
     /*Flex Element*/
     flex-grow: 1;
 }
+
+@media(max-width:800px) {
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    header nav {
+        padding: 2.5rem;
+        /*Flex Container*/
+        display: flex;
+        align-self:stretch;
+    }
+
+    nav a {
+        flex-basis: 100%;
+    }
+
+}
+
 
 /*Row 1*/
 .row-1 {
@@ -256,7 +285,7 @@ header img {
 /*Row 2*/
 .row-2 {
     padding:2.2rem 0;
-    border-top: 0.1rem black solid;
+    border-top: 0.15rem black solid;
     /*Flex Container*/
     display: flex;
 }
