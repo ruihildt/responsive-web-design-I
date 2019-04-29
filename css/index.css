@@ -210,7 +210,7 @@ ul li {
 
 a.cta-box {
     border: 0.1rem black solid;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     padding: 0.5rem 2.6rem;
     background-color: #fff;
     color: black;
@@ -261,6 +261,37 @@ header img {
         display: flex;
         align-self:stretch;
     }
+}
+
+@media(max-width:500px) {
+    header {
+        padding-bottom: 0;
+        /*Flex Container*/
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    header nav {
+        padding: 0rem;
+        padding-top: 1.3rem;
+        /*Flex Container*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        padding:1rem;
+        border-bottom: 0.12rem solid grey;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    nav a:first-child {
+        border-top: 0.12rem solid grey;
+
+    }
+
 }
 
 
