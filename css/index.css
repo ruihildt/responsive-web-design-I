@@ -329,7 +329,7 @@ header img {
     }
 }
 
-
+/*Row 4*/
 .row-4 {
     padding: 2.2rem 0;
     border-bottom: 0.15rem black solid;
@@ -339,10 +339,15 @@ header img {
 
 @media(max-width:800px) {
     .row-4 {
-        padding: 1rem;
+        padding: 2.2rem;
+        justify-content: space-between;
     }
+
+        .row-4 .column {
+            width: 30%;
 }
 
+/*Row 5*/
 .row-5 {
     padding:2.2rem 0;
     width: 200px;
@@ -354,6 +359,7 @@ header img {
     }
 }
 
+/*Footer*/
 footer {
     text-align: center;
     margin: 20px 0;
