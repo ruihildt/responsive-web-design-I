@@ -158,19 +158,20 @@ h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 /*General*/
+
+:root {
+    font-size: 16px;
+}
+
 body {
     width: 876px;
     margin: 0 auto;
 }
 
-p {
-    font-family: roboto;
-}
-
 a {
-    font-family: roboto;
     text-decoration: none;
     color: grey;
+    font-size:
 }
 
 a:hover {
@@ -179,7 +180,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 4.2em;
+    font-size: 4.5em;
 }
 
 h2 {
@@ -188,7 +189,6 @@ h2 {
 
 ul {
     margin-left: 20px;
-
     list-style-type: square;
 }
 
@@ -196,18 +196,25 @@ ul li {
     padding: 8px;
 }
 
-.column {
-    margin-right: 20px;
+a.cta-box {
+    border: 0.1rem black solid;
+    font-size: 1.1em;
+    padding: 0.5rem 2.6rem;
+    background-color: #fff;
+    color: black;
 }
+
 
 /*Nav*/
 header {
     position: sticky;
     top: 0;
+    padding: 1.9rem 0;
+    background-color: #fff;
     /*Flex Container*/
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
 header nav {
@@ -215,7 +222,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     /*Flex Element*/
-    flex-grow: 0.8;
+    flex-grow: 0.76;
 }
 
 header img {
@@ -225,12 +232,15 @@ header img {
 
 /*Row 1*/
 .row-1 {
-    padding: 40px 0;
+    padding: 2.3rem 0;
+    padding-bottom: 4.8rem;
     /*Flex Container*/
     display: flex;
+    justify-content: space-between;
 }
 
 .row-1 .column:first-child {
+    margin-left: 3em;
     /*Flex Container*/
     display: flex;
     flex-direction: column;
@@ -240,102 +250,30 @@ header img {
 
 .row-1 .column:first-child h1 {
     text-align: center;
-}
-
-.cta-box a {
-    /*Button style*/
-    border: 1px black solid;
-    padding: 10px;
+    width: 64%;
 }
 
 /*Row 2*/
 .row-2 {
-    padding: 40px 0;
-    border-top: 2px black solid;
+    padding:2.2rem 0;
+    border-top: 0.1rem black solid;
     /*Flex Container*/
     display: flex;
 }
 
 .row-4 {
-    padding: 40px 0;
+    padding: 2.2rem 0;
+    border-bottom: 0.15rem black solid;
     /*Flex Container*/
     display: flex;
 }
 
 .row-5 {
+    padding:2.2rem 0;
     width: 200px;
 }
 
 footer {
     text-align: center;
     margin: 20px 0;
-}
-
-/*Page Services*/
-
-.entry {
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #000;
-}
-
-.services-header-img {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-/*Services section*/
-
-.services {
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #000;
-    /*Flex Container*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.services div {
-    border: 1px solid #000;
-    padding: 10px;
-    margin: 20px 0;
-    width: 48%;
-    background-color: rgba(0, 0, 0, 0.05);
-    height: 240px;
-    /*Flex Container*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.cta-box {
-    border: 1px solid #000;
-    border-radius: 7px;
-}
-
-a.cta-box {
-    padding: 10px 30px;
-    font-size: 0.6em;
-    background-color: #fff;
-    color: black;
-}
-
-/*Facts */
-
-.facts {
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-    /*Flex Container*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.facts div {
-    padding: 10px;
-    margin: 20px 0;
-    width: 48%;
 }
