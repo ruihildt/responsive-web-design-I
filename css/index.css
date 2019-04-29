@@ -224,8 +224,6 @@ img {
 /*Nav*/
 
 header {
-    position: sticky;
-    top: 0;
     padding: 1.9rem 0;
     background-color: #fff;
     /*Flex Container*/
@@ -360,6 +358,12 @@ header img {
     }
 }
 
+@media(max-width:500px) {
+    .row-2 {
+        flex-direction: column;
+    }
+}
+
 /*Row 4*/
 .row-4 {
     padding: 2.2rem 0;
@@ -374,8 +378,20 @@ header img {
         justify-content: space-between;
     }
 
-        .row-4 .column {
-            width: 30%;
+    .row-4 .column {
+        width: 30%;
+    }
+}
+
+@media(max-width:500px) {
+    .row-4 {
+        flex-direction: column;
+    }
+
+    .row-4 .column {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 /*Row 5*/
