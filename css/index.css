@@ -1,3 +1,413 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/*General*/
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    width: 876px;
+    margin: 0 auto;
+}
+
+@media(max-width:800px) {
+    body {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:500px) {
+    body {
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rosybrown;
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+ul li {
+    padding: 8px;
+}
+
+a.cta-box {
+    border: 0.1rem black solid;
+    font-size: 1.1rem;
+    padding: 0.5rem 2.6rem;
+    background-color: #fff;
+    color: black;
+}
+
+img {
+    width:100%;
+    display: block;
+}
+
+/*Nav*/
+
+header {
+    padding: 1.9rem 0;
+    background-color: #fff;
+    /*Flex Container*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    /*Flex Container*/
+    display: flex;
+    justify-content: space-between;
+    /*Flex Element*/
+    flex-grow: 0.76;
+}
+
+header img {
+    /*Flex Element*/
+    flex-grow: 1;
+}
+
+@media(max-width:800px) {
+    header {
+        padding-bottom:0;
+        /*Flex Container*/
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    header nav {
+        padding: 2.5rem;
+        /*Flex Container*/
+        display: flex;
+        align-self:stretch;
+    }
+}
+
+@media(max-width:500px) {
+    header {
+        padding-bottom: 0;
+        /*Flex Container*/
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    header nav {
+        padding: 0rem;
+        padding-top: 1.3rem;
+        /*Flex Container*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        padding:1rem;
+        border-bottom: 0.12rem solid grey;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    nav a:first-child {
+        border-top: 0.12rem solid grey;
+
+    }
+
+}
 
 
+/*Row 1*/
+.row-1 {
+    padding: 2.3rem 0;
+    padding-bottom: 4.8rem;
+    /*Flex Container*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-1 .column:first-child {
+    margin-left: 3em;
+    /*Flex Container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-1 .column:first-child h1 {
+    text-align: center;
+    width: 64%;
+}
+
+@media(max-width:800px) {
+    .row-1 {
+        padding-bottom: 3rem;
+        margin-bottom:2rem;
+        /*Flex Container*/
+        flex-direction: column;
+        align-items: center;
+        }
+
+    .row-1 .column:first-child {
+        margin-left: 0;
+    }
+
+    .row-1 .column:first-child h1 {
+        width: 48%;
+    }
+
+    .row-1 .column:last-child {
+        display: none;
+    }
+
+}
+
+/*Row 2*/
+.row-2 {
+    padding:2.2rem 0;
+    border-top: 0.15rem black solid;
+    /*Flex Container*/
+    display: flex;
+
+}
+
+@media(max-width:800px) {
+    .row-2 {
+        padding: 1rem;
+    }
+
+    .row-2 .column{
+        padding: 1rem ;
+    }
+}
+
+@media(max-width:500px) {
+    .row-2 {
+        flex-direction: column;
+    }
+}
+
+/*Row 4*/
+.row-4 {
+    padding: 2.2rem 0;
+    border-bottom: 0.15rem black solid;
+    /*Flex Container*/
+    display: flex;
+}
+
+@media(max-width:800px) {
+    .row-4 {
+        padding: 2.2rem;
+        justify-content: space-between;
+    }
+
+    .row-4 .column {
+        width: 30%;
+    }
+}
+
+@media(max-width:500px) {
+    .row-4 {
+        flex-direction: column;
+    }
+
+    .row-4 .column {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/*Row 5*/
+.row-5 {
+    padding:2.2rem 0;
+    width: 200px;
+}
+
+@media(max-width:800px) {
+    .row-5 {
+        margin: 1rem;
+    }
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
